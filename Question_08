@@ -1,0 +1,15 @@
+/* Write a program to solve -2x2=5x+3. */
+
+
+import java.util.Scanner;
+public class Question_08 {
+	public static void main(String[] args) {
+     int a=2,b=5,c=3;
+    System.out.println("The given equation gets simplified to:"+a+"x^2+"+b+"x+"+c+"=0");
+	System.out.print("Which gives the values of x as: ");
+	int d=0;
+	d=(int)(Math.sqrt((b*b)-(4*a*c)));
+	System.out.print((0-b+d)/2);
+	System.out.println(" and "+((0-b-d)/2));
+	}
+}
