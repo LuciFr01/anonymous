@@ -1,0 +1,14 @@
+/* Write a program that accepts an integer (n) and computes the value of n+nn+nnn. */
+
+import java.util.*;
+public class Question_10 {
+ public static void main(String[] args) {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("Enter a number");
+	 int n=sc.nextInt();int s=0,d=0;
+	 for(int i=0;i<3;i++) {
+	 d=((d*10)+n);s=s+d;
+	 }
+	 System.out.println("SUM="+s);
+	}
+}
