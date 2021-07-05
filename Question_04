@@ -1,0 +1,26 @@
+/* Write a program to input a number and check if it is an Automorphic number or not. */
+
+import java.util.Scanner;
+public class Question_04 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		if(Automorphic(n)) {
+			System.out.println("Yes it is an automorphic number");
+		}
+		else
+		{
+			System.out.println("No it is not an automorphic number");
+		}
+	}
+	public static boolean Automorphic(int a) {
+	   int b = a * a;
+        while (a > 0) {
+            if (a % 10 != b % 10)
+                return false;
+            a /= 10;
+            b /= 10;
+	}
+        return true;
+	}
+}
