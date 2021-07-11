@@ -1,0 +1,49 @@
+/* An array of n distinct element is provided find the minimum number of swaps required to sort it. */
+import java.util.*;
+class Q1{
+public int minSwaps(int[] arr, int n)
+    {
+        int S = 0;
+        int[] temp = Arrays.copyOfRange(arr, 0, n);
+        Arrays.sort(temp);
+        for (int i = 0; i < n; i++) 
+        {
+            if (arr[i] != temp[i]) 
+            {
+                S++;
+                swap(arr, i, indexOf(arr, temp[i]));
+            }
+        }
+        return S;
+    }
+    public int indexOf(int[] arr, int x)
+    {
+        for (int i = 0; i < arr.length; i++) 
+        {
+            if (arr[i] == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    }
+    public void swap(int[] arr, int i, int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    public static void main(String args[]){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter limit");
+   int n=sc.nextInt();
+   int[] arr=new int[n];
+   for (int i =0;i<n;i++)
+   {
+   System.out.println("Enter element");
+   arr[i]sc.nextInt();
+   }
+   System.out.println(minSwaps(arr,n));
+    }
+    }
